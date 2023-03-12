@@ -9,7 +9,7 @@
 @endsection
 
 @section('judul')
-    <h2 class="text-primary">Daftar Anggota</h2>
+    <h2 class="m-0 font-weight-bold" style=" color: #293462;">Daftar Anggota</h2>
 @endsection
 
 @push('styles')
@@ -32,7 +32,12 @@
 @endpush
 
 @section('content')
-    <a href="/anggota/create" class="btn btn-info mb-3">Tambah Anggota</a>
+<style>
+    .fa-trash {
+        color: white;
+    }
+</style>
+    <a href="/anggota/create" class="btn mb-3" style="background-color: #FEB139; color: white;">Tambah Anggota</a>
 
     <div class="col-lg-12">
         <div class="card mb-4">
@@ -59,12 +64,12 @@
                                 <td>
 
                                     @if (Auth::user()->isAdmin == 1)
-                                        <button class="btn btn-info"><a href="/anggota/{{ $item->id }}"
+                                    <button class="btn" style="background-color: #293462;"><a href="/anggota/{{ $item->id }}"
                                                 style="text-decoration: none; color:white;"><i class="fa-solid fa-circle-info"></i></a></button>
-                                        <button class="btn btn-warning"><a href="/anggota/{{ $item->id }}/edit"
+                                        <button class="btn" style="background-color: #FFF80A;"><a href="/anggota/{{ $item->id }}/edit"
                                                 style="text-decoration: none;color:white"><i class="fa-solid fa-pen-to-square"></i></a></button>
-                                        <button class="btn btn-danger"><a data-toggle="modal"
-                                                data-target="#DeleteModal{{ $item->id }}"><i class="fa-solid fa-trash"></i></a></button>
+                                        <button class="btn" style="background-color: #D61C4E;"><a data-toggle="modal"
+                                                data-target="#DeleteModal{{ $item->id }}"><i class="fa-solid fa-trash" ></i></a></button>
 
                                         <!--Delete Modal -->
                                         <div class="modal fade" id="DeleteModal{{ $item->id }}" tabindex="-1" role="dialog"

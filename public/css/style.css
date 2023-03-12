@@ -20,8 +20,10 @@ p {
   position:relative;
   flex-direction: row;
   text-align:center;
-  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+  background: rgb(213,204,26);
+  background: linear-gradient(90deg, rgba(213,204,26,1) 18%, rgba(226,169,24,1) 100%);
   color:white;
+  height: 100vh;
 }
 .logo {
   width:50px;

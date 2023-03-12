@@ -9,7 +9,7 @@
 @endsection
 
 @section('judul')
-    <h2 class="text-primary">Daftar Kategori</h2>
+    <h2 class="m-0 font-weight-bold" style="color: #293462;">Daftar Kategori</h2>
 @endsection
 
 @push('styles')
@@ -32,8 +32,13 @@
 @endpush
 
 @section('content')
+<style>
+    .fa-trash {
+        color: white;
+    }
+</style>
     @if (Auth::user()->isAdmin == 1)
-        <a href="/kategori/create" class="btn btn-info mb-3">Tambah Kategori</a>
+        <a href="/kategori/create" class="btn mb-3" style="background-color: #FEB139; color: white;">Tambah Kategori</a>
     @endif
 
     <div class="col-lg-auto">
@@ -56,12 +61,12 @@
                                 <td>
 
                                     @if (Auth::user()->isAdmin == 1)
-                                        <button class="btn btn-info"><a href="/kategori/{{ $item->id }}"
+                                        <button class="btn" style="background-color: #293462;"><a href="/kategori/{{ $item->id }}"
                                                 style="text-decoration: none; color:white;"><i class="fa-solid fa-circle-info"></i></a></button>
-                                        <button class="btn btn-warning"><a href="/kategori/{{ $item->id }}/edit"
+                                        <button class="btn" style="background-color: #FFF80A;"><a href="/kategori/{{ $item->id }}/edit"
                                                 style="text-decoration: none;color:white"><i class="fa-solid fa-pen-to-square"></i></a></button>
-                                        <button class="btn btn-danger"><a data-toggle="modal"
-                                                data-target="#DeleteModal{{ $item->id }}"><i class="fa-solid fa-trash"></i></a></button>
+                                        <button class="btn" style="background-color: #D61C4E;"><a data-toggle="modal"
+                                                data-target="#DeleteModal{{ $item->id }}"><i class="fa-solid fa-trash" ></i></a></button>
 
                                         <!--Delete Modal -->
                                         <div class="modal fade" id="DeleteModal{{ $item->id }}" role="dialog"
@@ -69,14 +74,14 @@
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h5 class="modal-title" id="ModalLabelDelete">Ohh No!</h5>
+                                                        <h5 class="modal-title" id="ModalLabelDelete">Wah Wah!</h5>
                                                         <button type="button" class="close" data-dismiss="modal"
                                                             aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <p>Are you sure you want to delete?</p>
+                                                        <p>Beneran mau di hapus nih?</p>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-outline-primary"

@@ -9,7 +9,7 @@
 @endsection
 
 @section('judul')
-    <h1 class="text-primary">Daftar Riwayat Peminjaman</h1>
+    <h2 class="m-0 font-weight-bold" style="color: #293462;">Daftar Riwayat Peminjaman</h2>
 @endsection
 
 
@@ -35,8 +35,8 @@
 @section('content')
     @if (Auth::user()->isAdmin == 1)
     <div class="container">
-        <a href="/peminjaman/create" class="btn btn-info mb-3 "><i class="fa-solid fa-plus"></i> tambah</a>
-        <a href="/cetaklaporan" class="btn btn-info mb-3 mx-2"><i class="fa-solid fa-print"></i> Cetak</a>
+        <a href="/peminjaman/create" class="btn btn-success mb-3 "><i class="fa-solid fa-plus"></i> tambah</a>
+        <a href="/cetaklaporan" class="btn mb-3 mx-2" style="background-color: #FEB139; color: white;"><i class="fa-solid fa-print"></i> Cetak</a>
     </div>
     <div class="col-lg-auto">
         <div class="card mb-4">

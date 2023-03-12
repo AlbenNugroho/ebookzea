@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="{{ asset('/img/logo.png') }}" rel="icon">
-    <title>Sistem Informasi Perpustakaan</title>
+    <title>Perpustakaan albentok</title>
     <link href="{{ asset('/template/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('/template/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('/template/css/ruang-admin.min.css') }}" rel="stylesheet">
@@ -50,17 +50,17 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabelLogout">Ohh No!</h5>
+                                    <h5 class="modal-title" id="exampleModalLabelLogout">Wah wah!</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <p>Are you sure you want to logout?</p>
+                                    <p>Beneran mau keluar nih?</p>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-outline-primary"
-                                        data-dismiss="modal">Cancel</button>
+                                        data-dismiss="modal">Batal</button>
                                     <a href="{{ route('logout') }}" class="btn btn-outline-danger"
                                         onclick="event.preventDefault();
                      document.getElementById('logout-form').submit();">

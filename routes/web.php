@@ -11,6 +11,8 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CetakLaporanController;
 use App\Http\Controllers\PengembalianController;
 use App\Http\Controllers\RiwayatPinjamController;
+use App\Http\Controllers\BookHomeController;
+use App\Models\Buku;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,9 +25,24 @@ use App\Http\Controllers\RiwayatPinjamController;
 |
 */
 
-Route::get('/', function () {
-    return view('auth.login');
-});
+Route::get('/', [App\Http\Controllers\BookHomeController::class, 'index']);
+Route::get('/data-buku', [App\Http\Controllers\BookHomeController::class, 'showbuku']);
+Route::get('/bukudetail/{id}', [App\Http\Controllers\BookHomeController::class, 'show']);
+Route::get('/bukucari', 'App\Http\Controllers\BookHomeController@search')->name('books.search');
+// Route::get('/bukucari', [App\Http\Controllers\BookHomeController::class, 'search']);
+
+// Route::get('', function($id) {
+//     $bukudata = Buku::find($id);
+//     return view('detailbuku', compact('bukudata'));
+//  });
+
+// Route::get('/', function () {
+//     return view('homepage');
+// });
+
+// Route::get('/', function () {
+//     return view('auth.login');
+// });
 Auth::routes();
 
 Route::middleware(['auth'])->group(function () {

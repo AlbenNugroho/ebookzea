@@ -10,7 +10,7 @@
 @endsection
 
 @section('judul')
-    <h2 class="text-primary">Edit Kategori</h2>
+    <h2 class="text-dark fw-bold" style="font-weight: bold">Edit Kategori</h2>
 @endsection
 
 @section('content')
@@ -19,7 +19,7 @@
             @csrf
             @method('put')
             <div class="form-group">
-                <label for="formGroupExampleInput">Nama Kategori</label>
+                <label for="formGroupExampleInput" style="font-weight: bold; font-size: 1rem;">Nama Kategori</label>
                 <input name="nama" type="text" value="{{ old('nama', $kategori->nama) }}" class="form-control"
                     id="formGroupExampleInput">
             </div>
@@ -28,7 +28,7 @@
             @enderror
 
             <div class="form-group">
-                <label>Deskripsi</label>
+                <label style="font-weight: bold; font-size: 1rem;">Deskripsi</label>
                 <textarea class="form-control" name="deskripsi" cols="30" rows="3">{{ old('deskripsi', $kategori->deskripsi) }}</textarea>
 
                 @error('deskripsi')
@@ -37,8 +37,8 @@
 
             </div>
             <div class="d-flex justify-content-end">
-                <a href="/kategori" class="btn btn-danger mx-2 px-3">Batal</a>
-                <button class="btn btn-info px-4">Simpan</button>
+                <a href="/kategori" class="btn mx-2 px-3 text-white" style="background-color: #D61C4E;">Batal</a>
+                <button class="btn btn-info px-4 bg-success">Simpan</button>
             </div>
         </form>
     </div>

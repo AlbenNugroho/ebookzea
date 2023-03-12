@@ -9,22 +9,23 @@
 @endsection
 
 @section('judul')
-   <h2 class="text-primary"> Selamat Datang, {{ Auth::user()->name }}</h2>
+   <h2 class="text-secondary"> Selamat Datang, {{ Auth::user()->name }}</h2>
 @endsection
 
 @section('content')
 <div class="row mb-3">
 <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card h-100 bg-gradient-primary">
+            <div class="card h-100">
                 <div class="card-body">
                     <div class="row align-items-center">
                         <div class="col mr-2">
-                            <div class="text-sm font-weight-bold text-uppercase mb-1 text-light">Jumlah Buku</div>
-                            <div class="text-sm text-light h5 mb-0 font-weight-bold">{{ $buku }}</div>
-                            <div class="button mt-2"><a href="/buku" class="text-light">Lihat</a></div>
+                            <!-- <div class="text-sm font-weight-bold text-uppercase mb-1 text-dark" style="color:#98DFD6;">Jumlah Buku</div> -->
+                            <div class="text-sm font-weight-bold text-uppercase mb-1 text-dark">Jumlah Buku</div>
+                            <div class="text-sm text-dark h5 mb-0 font-weight-bold">{{ $buku }}</div>
+                            <div class="button mt-2"><a href="/buku" class="text-dark">Lihat</a></div>
                         </div>
                         <div class="col-auto">
-                            <i class="fa-solid fa-book fa-3x text-light"></i>
+                            <i class="fa-solid fa-book fa-3x text-dark"></i>
                         </div>
                     </div>
                 </div>

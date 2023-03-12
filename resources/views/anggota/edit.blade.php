@@ -9,7 +9,7 @@
 @endsection
 
 @section('judul')
-    <h1 class="text-primary">Edit Data Anggota</h1>
+    <h2 class="m-0 font-weight-bold" style=" color: #293462;">Edit data Anggota</h2>
 @endsection
 
 @section('content')
@@ -19,7 +19,7 @@
 
         <div class="card pb-5">
             <div class="form-group mx-4 my-2">
-                <label for="nama" class="text-md text-primary font-weight-bold mt-2">Nama Lengkap</label>
+                <label for="nama" class="text-md text-dark font-weight-bold mt-2">Nama Lengkap</label>
                 <input type="text" name="name" class="form-control" value="{{ old('name', $user->name) }}">
             </div>
 
@@ -28,7 +28,7 @@
             @enderror
 
             <div class="form-group mx-4 my-2">
-                <label for="nama" class="text-md text-primary font-weight-bold">Nomor Induk Masiswa</label>
+                <label for="nama" class="text-md text-dark font-weight-bold">Nomor Induk Masiswa</label>
                 <input type="text" name="npm" class="form-control" value="{{ old('npm', $profile->npm) }}">
             </div>
 
@@ -37,7 +37,7 @@
             @enderror
 
             <div class="form-group mx-4 my-2">
-                <label for="nama" class="text-md text-primary font-weight-bold">Program Studi</label>
+                <label for="nama" class="text-md text-dark font-weight-bold">Program Studi</label>
                 <input type="text"  name= "prodi" class="form-control" value="{{ old('prodi', $profile->prodi) }}">
             </div>
 
@@ -46,7 +46,7 @@
             @enderror
 
             <div class="form-group mx-4 my-2">
-                <label for="nama" class="text-md text-primary font-weight-bold">Alamat</label>
+                <label for="nama" class="text-md text-dark font-weight-bold">Alamat</label>
                 <input type="text" name ="alamat" class="form-control" value="{{ old('alamat', $profile->alamat) }}">
             </div>
 
@@ -55,7 +55,7 @@
             @enderror
 
             <div class="form-group mx-4 my-2">
-                <label for="nama" class="text-md text-primary font-weight-bold">Nomor Telepon</label>
+                <label for="nama" class="text-md text-dark font-weight-bold">Nomor Telepon</label>
                 <input type="text" name="noTelp" class="form-control" value="{{ old('noTelp', $profile->noTelp) }}">
             </div>
 
@@ -64,7 +64,7 @@
             @enderror
 
             <div class="form-group mx-4 my-2">
-                <label for="gambar" class="text-md text-primary font-weight-bold">Tambah Photo Profile</label>
+                <label for="gambar" class="text-md text-dark font-weight-bold">Tambah Photo Profile</label>
                 <div class="custom-file">
                     <input type="file" name="photoProfile" value="{{ old('photoProfile', $profile->photoProfile) }}">
                 </div>
@@ -76,7 +76,7 @@
 
             <div class="button-save d-flex justify-content-end">
                 <a href="/anggota" class="btn btn-danger mt-4 px-3 py-1">Batal</a>
-                <button type="submit" class="btn btn-primary mt-4 mx-2 px-4 py-1">Simpan</button>
+                <button type="submit" class="btn btn-success mt-4 mx-2 px-4 py-1">Simpan</button>
     </form>
     </div>
     </div>

@@ -33,7 +33,7 @@
             </div>
 
             <a href="/kategori" class="btn btn-danger">Batal</a>
-            <button class="btn btn-info">Tambah</button>
+            <button class="btn btn-success">Tambah</button>
 
         </form>
     </div>
